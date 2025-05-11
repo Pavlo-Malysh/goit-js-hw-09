@@ -30,15 +30,15 @@ form.addEventListener("submit", handlerFormSubmit)
 function handlerFormSubmit(event) {
   event.preventDefault()
 
-  const email = event.currentTarget.elements.email.value
-  const message = event.currentTarget.elements.message.value
-
-  if (email === "" || message === "") {
+  if (!formData.email === "" || !formData.message === "") {
     alert("Fill please all fields")
   } else {
     console.log(formData);
     localStorage.removeItem("feedback-form-state")
     form.reset()
+    Object.keys(formData).forEach(key => {
+      formData[key] = "";
+    })
   }
-
 }
+
