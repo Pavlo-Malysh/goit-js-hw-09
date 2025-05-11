@@ -1,3 +1,7 @@
+.container.form {
+  max-width: 500px;
+}
+
 .feedback-form {
   padding-top: 30px;
 }
